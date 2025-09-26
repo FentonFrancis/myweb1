@@ -1,0 +1,127 @@
+/* Header styling */
+header {
+    background-color: #ffffff; /* Light background */
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #0f1d2b;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 12px 20px;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    background-color: #132231;
+    display: inline-block;
+    min-width: 120px;
+    text-align: center;
+}
+
+nav a:hover, nav a.active {
+    background-color: #1a2e42;
+    color: #ffcc00;
+    transform: none;
+}
+
+nav a:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffcc00;
+    animation: underline 0.3s ease forwards;
+}
+
+nav a.active {
+    font-weight: bold;
+    background-color: #1a2e42;
+    border-radius: 5px 5px 0 0;
+    padding-bottom: 15px;
+    margin-bottom: -10px;
+}
+
+nav a.active + select {
+    background-color: #1a2e42;
+    font-weight: bold;
+    border-radius: 0 0 5px 5px;
+    margin-top: -10px;
+    margin-left: 0;
+    border-top: none;
+}
+
+nav select {
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #132231;
+    color: #c0cdda;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+nav select:hover {
+    background-color: #1a2e42;
+    border-color: #ffcc00;
+}
+
+.dropdown {
+    background-color: #132231;
+    color: #4343cc;
+}
+
+@keyframes underline {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.current-page {
+    animation: pulse 2s infinite;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.container img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+}
+.container article {
+    width: 45%; /* Adjusted width */
+    padding-left: 20px;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Footer styling */
+footer {
+    background-color: #152433; /* Light background */
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
